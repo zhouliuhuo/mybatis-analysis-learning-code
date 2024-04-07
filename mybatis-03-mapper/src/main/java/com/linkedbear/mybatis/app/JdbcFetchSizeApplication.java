@@ -9,7 +9,7 @@ public class JdbcFetchSizeApplication {
     
     public static void main(String[] args) throws Exception {
         Class.forName("com.mysql.jdbc.Driver");
-        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/mybatis?characterEncoding=utf-8", "root", "123456");
+        Connection connection = DriverManager.getConnection("jdbc:mysql://175.178.221.144:3307/mybatis?characterEncoding=utf-8", "root", "123456");
         PreparedStatement ps = connection.prepareStatement("select * from tbl_department");
         ps.setFetchSize(10);
         ResultSet resultSet = ps.executeQuery();
